@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <style>
+        body {
+            background-color: rgb(152, 175, 187);
+            text-align: center;
+        }
+        body > p {
+            font-weight: 400;
+            color: #000000;
+            font-size: 26px;
+            font-family: 'Franziska, Georgia, Cambria';
+            padding: 4em 10em 1em 10em;
+        }
+        button {
+            background-color: #eee;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            width: 13em;
+            border-radius: 1rem;
+            color: rgb(27, 83, 223);
+            box-shadow: 0 0.4rem #dfd9d9;
+            cursor: pointer;
+        }
+        button:active {
+            color: white;
+            box-shadow: 0 0.2rem #dfd9d9;
+            transform: translateY(0.2rem);
+        }
+        button:hover:not(:disabled) {
+            background: rgb(30, 45, 204);
+            color: white;
+        }
+        button:disabled {
+            cursor: auto;
+            color: grey;
+        }
+        .gif-container {
+            display: none;
+            margin-top: 2rem;
+        }
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gif-container p {
+            font-size: 1.5rem;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        ami reshih okonchatelno che shte hodq da ucha v sofia a ne v plovdiv kakto si govorehme. 
+        i nay-veroqtno tam shte ostana da jiveq. kolkoto i da ne haresvah sofia brat mi e tam a az naistina 
+        iskam da sum pri nego. ne znam dali pomnish che ne haresvah na brat mi priqtelkata moje bi mainly zashtoto toy 
+        i obrushtashe poveche vnimanie no se okaza che tq e super gotina i sega mnogo se razbirame s neq. 
+        dori ostvah da spq pri tqh nqkolko puti kogato hodeh na machove v gurciq. veche igrah edin sezon 
+        za otbor v gurciq i beshe dosta hubavo shte vidim tazi godina kakvo shte pravq. stanah purva na 
+        jeni i az ne znam kak chestno kazano zashtoto tazi godina mi beshe mn tejka s uchilishte tenis 
+        i vsichko i nqmah vreme za nishto daje i ne sum trenirala tolkova. 
+    </p>
+    <button onclick="location.href='apology.html'">Want to hear more?</button>
+    <button onclick="showGif()">Not really</button>
+    <div class="gif-container" id="gifContainer">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHNoY3Y3NmZ5aGRuYTdxZWwyY3d4eDkzYWg3MHpjNGN0aWwwcTl1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ISOckXUybVfQ4/giphy.webp" alt="Not really">
+        <p>That's okay. Maybe another time.</p>
+    </div>
+    <script>
+        function showGif() {
+            var gifContainer = document.getElementById('gifContainer');
+            gifContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

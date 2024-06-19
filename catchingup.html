@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's up</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background: #f1f1f1;
+            background-image: linear-gradient(
+                90deg,
+                transparent 50px,
+                #ffb4b8 50px,
+                #ffb4b8 52px,
+                transparent 52px
+                ),
+            linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+            background-size: 100% 30px;
+            text-align: center;
+        }
+        h2 {
+            font: bold 70px "Century Schoolbook", Georgia, Times, serif;
+            color: #0c0c0c;
+            line-height: 90%;
+            margin: 3em auto 1em auto;
+            letter-spacing: -2px;
+        }
+        button {
+            --button_radius: 0.75em;
+            --button_color: #e8e8e8;
+            --button_outline_color: #000000;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+            border-radius: var(--button_radius);
+            background: var(--button_outline_color);
+            margin-right: 1em;
+        }
+        .button_top {
+            display: block;
+            box-sizing: border-box;
+            border: 2px solid var(--button_outline_color);
+            border-radius: var(--button_radius);
+            padding: 0.75em 1.5em;
+            background: var(--button_color);
+            color: var(--button_outline_color);
+            transform: translateY(-0.2em);
+            transition: transform 0.1s ease;
+        }
+        button:hover .button_top {
+            transform: translateY(-0.33em);
+        }
+        button:active .button_top {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h2>E how have u been?</h2>
+    <button id="goodThanksButton">
+        <span class="button_top">Good thanks</span>
+    </button>
+    <button id="notSoGreatButton">
+        <span class="button_top">Not so great :/</span>
+    </button>
+
+    <script>
+        document.getElementById('goodThanksButton').addEventListener('click', function() {
+            window.location.href = 'goodnews.html'; 
+        });
+
+        document.getElementById('notSoGreatButton').addEventListener('click', function() {
+            window.location.href = 'badnews.html'; 
+        });
+    </script>
+</body>
+</html>

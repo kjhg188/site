@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-color: rgb(152, 175, 187);
+            text-align: center;
+        }
+        button {
+            --bg: #000;
+            --hover-bg: #ff90e8;
+            --hover-text: #000;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid var(--bg);
+            border-radius: 4px;
+            padding: 0.8em 2em;
+            background: var(--bg);
+            transition: 0.2s;
+        }
+        button:hover {
+            color: var(--hover-text);
+            transform: translate(-0.25rem, -0.25rem);
+            background: var(--hover-bg);
+            box-shadow: 0.25rem 0.25rem var(--bg);
+        }
+        button:active {
+            transform: translate(0);
+            box-shadow: none;
+        }
+        h2 {
+            font-family: oswald;
+            font-size: 70px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 1;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            text-align: center;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        p {
+            line-height: 1.66em;
+            margin-top: 1em;
+            font-family: 'Lato';
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>I'm glad to see u again :)</h2>
+    <button id="openModal">Not me tho</button>
+    <button onclick="location.href='catchingup.html'">Me too</button>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Oh okay :(</h3>
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjB2MDhjMmh6cTdpMTJ2eDZ5aXpwNGl5OWg2dmY1eGh5b2M1NTU1biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xFnyJDPKOcqcH57m7e/giphy.webp" alt="" width="200">
+            <p>Ig mojesh prosto da zatvorish tova i da ne produljavash natatuk but if u want to please do so</p>
+        </div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("openModal");
+
+        var span = document.getElementById("closeModal");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>

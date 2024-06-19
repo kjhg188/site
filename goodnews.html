@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(152, 175, 187);
+            text-align: center;
+        }
+        .card {
+            position: relative;
+            width: 400px;
+            height: 450px;
+            border-radius: 14px;
+            z-index: 1111;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        }
+        .bg {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 390px;
+            height: 440px;
+            z-index: 2;
+            background: rgba(245, 242, 242, 0.95);
+            backdrop-filter: blur(24px);
+            border-radius: 10px;
+            overflow: hidden;
+            outline: 2px solid rgb(236, 183, 223);
+        }
+        .blob {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-color: #0099ff;
+            opacity: 1;
+            filter: blur(12px);
+            animation: blob-bounce 5s infinite ease;
+        }
+        .bg > * {
+            margin-top: 2em;
+        }
+        h2 {
+            font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+            color: #333;
+            line-height: 90%;
+            margin: .2em 0 .4em 0;
+            letter-spacing: -2px;
+        }
+        p {
+            font-family: georgia, serif;
+            color: #8b8581;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            line-height: 200%;
+            padding-top: 11px;
+        }
+        @keyframes blob-bounce {
+            0% {
+                transform: translate(-100%, -100%) translate3d(0, 0, 0);
+            }
+            25% {
+                transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+            }
+            50% {
+                transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+            }
+            75% {
+                transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+            }
+            100% {
+                transform: translate(-100%, -100%) translate3d(0, 0, 0);
+            }
+        }
+        button {
+            background: #fff;
+            border: 0.5px solid black;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            width: 140px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transform: skew(-21deg);
+            margin-right: 1em;
+            position: relative;
+        }
+        span {
+            display: inline-block;
+            transform: skew(21deg);
+        }
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 100%;
+            left: 0;
+            background: rgb(20, 20, 20);
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+        button:hover {
+            color: #fff;
+        }
+        button:hover::before {
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="bg">
+            <h2>Radvam se da go chuq!</h2>
+            <p>tbh I've missed our convos</p>
+            <button onclick="location.href='aboutme.html'"><span>S teb kakvo stava?</span></button>
+            <button onclick="location.href='apology.html'"><span>Let's catch up</span></button>
+        </div>
+        <div class="blob"></div>
+    </div>
+</body>
+</html>

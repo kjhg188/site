@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:(</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(152, 175, 187); 
+            text-align: center;
+        }
+        .card {
+            width: 390px;
+            height: 454px;
+            border-radius: 30px;
+            background: #212121;
+            box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                        -15px -15px 30px rgb(60, 60, 60);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: white;
+        }
+        .card h2 {
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .card button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Oh, I'm sorry to hear that :(</h2>
+        <p>Are you willing to share?</p>
+        <div class="button-container">
+            <button onclick="location.href='contact.html'">Sure</button>
+            <button onclick="location.href='apology.html'">I'd rather not</button>
+        </div>
+    </div>
+</body>
+</html>

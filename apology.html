@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!</title>
+    <style>
+        body {
+            background-color: rgb(152, 175, 187);
+            text-align: center;
+            padding: 10em;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            line-height: 1em;
+            font-size: 80px;
+            color: #fff;
+        }
+        button {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #03045e;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease-in;
+            z-index: 1;
+        }
+        button::before,
+        button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transform: skew(15deg);
+            transition: all 0.5s;
+            overflow: hidden;
+            z-index: -1;
+        }
+        button::before {
+            left: -10px;
+            background: #240046;
+        }
+        button::after {
+            right: -10px;
+            background: #5a189a;
+        }
+        button:hover::before,
+        button:hover::after {
+            width: 58%;
+        }
+        button:hover span {
+            color: #e0aaff;
+            transition: 0.3s;
+        }
+        button span {
+            color: #03045e;
+            font-size: 18px;
+            transition: all 0.3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <h2>I have something important to say...</h2>
+    <button onclick="location.href='apologytext.html'"><span>Continue</span></button>
+</body>
+</html>
